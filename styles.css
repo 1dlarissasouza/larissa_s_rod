@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+header p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.about .text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about .text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about .image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    background-color: #f6f6f6;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.skills ul, .professional ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    font-size: 1.05em;
+}
+
+.professional ul li {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    border-bottom: 1px solid #ddd;
+    padding: 6px 0;
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: #ddd;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+.tag.high { background-color: #ffb3b3; }
+.tag.medium { background-color: #ffd480; }
+
+.status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.status.done {
+    background-color: #c8e6c9;
+}
+
+.status.progress {
+    background-color: #bbdefb;
+}
+
+/* 🌟 Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about .text h2 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
